@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_form_promo_contents",
+  "info": {
+    "singularName": "registration-form-promo-content",
+    "pluralName": "registration-form-promo-contents",
+    "displayName": "Registration-Form-Promo-Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registration_form_promo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::registration-form-promo.registration-form-promo",
+      "inversedBy": "registration_form_promo_contents"
+    },
+    "site": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site.site",
+      "inversedBy": "registration_form_promo_contents"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

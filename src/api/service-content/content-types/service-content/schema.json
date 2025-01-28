@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_contents",
+  "info": {
+    "singularName": "service-content",
+    "pluralName": "service-contents",
+    "displayName": "Service-Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0
+    },
+    "duration": {
+      "type": "integer",
+      "default": 3
+    },
+    "finalPrice": {
+      "type": "decimal",
+      "min": 0
+    },
+    "percentageDiscount": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "standard",
+        "special"
+      ],
+      "required": true,
+      "default": "standard"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "priceList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "price-list.price-list-item"
+    },
+    "discount": {
+      "type": "decimal",
+      "min": 0
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pictureClassnames": {
+      "type": "text"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "service_contents"
+    },
+    "site": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site.site",
+      "inversedBy": "service_contents"
+    }
+  }
+}

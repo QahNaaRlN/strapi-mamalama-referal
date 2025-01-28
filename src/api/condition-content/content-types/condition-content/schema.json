@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "condition_contents",
+  "info": {
+    "singularName": "condition-content",
+    "pluralName": "condition-contents",
+    "displayName": "Condition-Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "condition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::condition.condition",
+      "inversedBy": "condition_contents"
+    },
+    "site": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site.site",
+      "inversedBy": "condition_contents"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

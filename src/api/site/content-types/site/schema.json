@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sites",
+  "info": {
+    "singularName": "site",
+    "pluralName": "sites",
+    "displayName": "Site",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "siteName": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "metadata": {
+      "type": "json"
+    },
+    "condition_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::condition-content.condition-content",
+      "mappedBy": "site"
+    },
+    "faq_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq-content.faq-content",
+      "mappedBy": "site"
+    },
+    "service_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-content.service-content",
+      "mappedBy": "site"
+    },
+    "registration_form_promo_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration-form-promo-content.registration-form-promo-content",
+      "mappedBy": "site"
+    },
+    "registration_form_success_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration-form-success-content.registration-form-success-content",
+      "mappedBy": "site"
+    }
+  }
+}

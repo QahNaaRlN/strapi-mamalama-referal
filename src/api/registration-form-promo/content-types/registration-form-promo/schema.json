@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_form_promos",
+  "info": {
+    "singularName": "registration-form-promo",
+    "pluralName": "registration-form-promos",
+    "displayName": "Registration-Form-Promo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registration_form_promo_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration-form-promo-content.registration-form-promo-content",
+      "mappedBy": "registration_form_promo"
+    }
+  }
+}

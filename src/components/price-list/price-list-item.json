@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_price_list_price_list_items",
+  "info": {
+    "displayName": "Price-List-Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "finalPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "unit": {
+      "type": "string"
+    }
+  }
+}

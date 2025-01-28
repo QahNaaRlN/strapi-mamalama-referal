@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_form_success_contents",
+  "info": {
+    "singularName": "registration-form-success-content",
+    "pluralName": "registration-form-success-contents",
+    "displayName": "Registration-Form-Success-Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registration_form_success": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::registration-form-success.registration-form-success",
+      "inversedBy": "registration_form_success_contents"
+    },
+    "site": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::site.site",
+      "inversedBy": "registration_form_success_contents"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

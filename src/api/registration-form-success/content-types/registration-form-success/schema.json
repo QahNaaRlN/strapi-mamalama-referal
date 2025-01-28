@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registration_form_successes",
+  "info": {
+    "singularName": "registration-form-success",
+    "pluralName": "registration-form-successes",
+    "displayName": "Registration-Form-Success",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registration_form_success_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::registration-form-success-content.registration-form-success-content",
+      "mappedBy": "registration_form_success"
+    }
+  }
+}
