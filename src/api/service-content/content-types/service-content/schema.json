@@ -16,9 +16,6 @@
       "type": "text",
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "price": {
       "type": "decimal",
       "min": 0
@@ -80,6 +77,9 @@
       "relation": "manyToOne",
       "target": "api::site.site",
       "inversedBy": "service_contents"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }

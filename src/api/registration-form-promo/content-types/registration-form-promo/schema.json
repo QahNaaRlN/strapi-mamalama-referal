@@ -17,6 +17,10 @@
       "relation": "oneToMany",
       "target": "api::registration-form-promo-content.registration-form-promo-content",
       "mappedBy": "registration_form_promo"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

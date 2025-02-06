@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "url": {
+    "domain": {
       "type": "string",
       "required": true,
       "unique": true
@@ -35,9 +35,6 @@
     "isActive": {
       "type": "boolean",
       "default": true
-    },
-    "metadata": {
-      "type": "json"
     },
     "condition_contents": {
       "type": "relation",
@@ -68,6 +65,21 @@
       "relation": "oneToMany",
       "target": "api::registration-form-success-content.registration-form-success-content",
       "mappedBy": "site"
+    },
+    "discount": {
+      "type": "integer",
+      "min": 0
+    },
+    "metaTitle": {
+      "type": "text",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "metaKeywords": {
+      "type": "text"
     }
   }
 }

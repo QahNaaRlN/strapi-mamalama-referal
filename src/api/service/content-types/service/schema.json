@@ -17,6 +17,10 @@
       "relation": "oneToMany",
       "target": "api::service-content.service-content",
       "mappedBy": "service"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

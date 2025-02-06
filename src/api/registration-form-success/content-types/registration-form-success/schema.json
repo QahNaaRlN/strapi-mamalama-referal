@@ -17,6 +17,10 @@
       "relation": "oneToMany",
       "target": "api::registration-form-success-content.registration-form-success-content",
       "mappedBy": "registration_form_success"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

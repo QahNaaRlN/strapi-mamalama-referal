@@ -17,6 +17,10 @@
       "relation": "oneToMany",
       "target": "api::condition-content.condition-content",
       "mappedBy": "condition"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }

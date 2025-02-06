@@ -17,6 +17,10 @@
       "relation": "oneToMany",
       "target": "api::faq-content.faq-content",
       "mappedBy": "faq"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
     }
   }
 }
